@@ -7,6 +7,11 @@
   pointer-events: none;
 }
 
+section {
+  padding-top: 100px; /* Space below the fixed header */
+  margin-bottom: 50px; /* Space between sections */
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
