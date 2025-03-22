@@ -1,6 +1,8 @@
 import { Grid } from "@mui/material";
 import React from "react";
 import { Link } from "react-scroll";
+import spark from "../assets/sp.svg"
+import ContactInfo from "./ContactInfo.tsx";
 
 const Header: React.FC = () => {
   return (
@@ -9,11 +11,14 @@ const Header: React.FC = () => {
         position: "fixed",
         top: 0,
         width: "calc(95% - 80px)",
-        marginTop: "1rem",
         padding: "10px",
         zIndex: 1000,
+        alignItems: "center",
+        display: "flex",
       }}
     >
+      <img src={spark} style={{ maxWidth: "4rem" }} />
+      <ContactInfo />
       <Grid
         container
         sx={{
@@ -23,6 +28,7 @@ const Header: React.FC = () => {
           paddingRight: "2rem",
         }}
       >
+
         {/* Home Link */}
         <Grid
           item
@@ -34,6 +40,20 @@ const Header: React.FC = () => {
         >
           <Link to="home" smooth={true} duration={500}>
             Home
+          </Link>
+        </Grid>
+
+        {/* Skill Link */}
+        <Grid
+          item
+          sx={{
+            marginRight: "20px",
+            "& a": { cursor: "pointer" },
+            "&:hover a": { color: "#61DAFB" },
+          }}
+        >
+          <Link to="skills" smooth={true} duration={500}>
+            Skills
           </Link>
         </Grid>
 

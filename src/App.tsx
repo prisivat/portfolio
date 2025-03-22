@@ -2,6 +2,8 @@ import React from "react";
 import Header from "./components/Header.tsx";
 import Home from "./components/Portfolio.tsx";
 import TicTacToe from "./components/TicTacToe.tsx";
+import ContactInfo from "./components/ContactInfo.tsx";
+import Skills from "./components/Skills.tsx";
 import { Box } from "@mui/material";
 import Sidebar from "./components/SideBar.tsx";
 
@@ -29,13 +31,20 @@ const App: React.FC = () => {
         <Header />
 
         {/* Sections for React Scroll */}
-        <section id="home" style={{ height: "150vh",minHeight: "100vh",  width: "100%", marginTop: "1rem"}}>
-        <Home />
+        <section id="home" style={{ height: "150vh", minHeight: "100vh", width: "100%", marginTop: "2rem" }}>
+          <Home />
+        </section>
+
+        <section id="skills" style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", position: "relative" }}>
+          <Skills />
         </section>
 
         <section id="fun" style={{ height: "100vh", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", position: "relative" }}>
-        <TicTacToe />
+          <TicTacToe />
         </section>
+
+
+
       </Box>
     </Box>
   );

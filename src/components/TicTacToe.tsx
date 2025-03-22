@@ -50,20 +50,20 @@ const TicTacToe = () => {
 
   return (
     <>
-    {/* Confetti only when there is a winner */}
+      {/* Confetti only when there is a winner */}
       {showConfetti && (
         <div style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }}>
           <Confetti drawShape={ctx => {
-    ctx.beginPath()
-    for(let i = 0; i < 22; i++) {
-      const angle = 0.35 * i
-      const x = (0.2 + (1.5 * angle)) * Math.cos(angle)
-      const y = (0.2 + (1.5 * angle)) * Math.sin(angle)
-      ctx.lineTo(x, y)
-    }
-    ctx.stroke()
-    ctx.closePath()
-  }}/>
+            ctx.beginPath()
+            for (let i = 0; i < 22; i++) {
+              const angle = 0.35 * i
+              const x = (0.2 + (1.5 * angle)) * Math.cos(angle)
+              const y = (0.2 + (1.5 * angle)) * Math.sin(angle)
+              ctx.lineTo(x, y)
+            }
+            ctx.stroke()
+            ctx.closePath()
+          }} />
         </div>
       )}
 
@@ -94,20 +94,20 @@ const TicTacToe = () => {
 
       {/* Reset Button */}
       <Button
-  variant="contained"
-  sx={{
-    marginTop: "20px",
-    color: "black",
-    background: "#61DAFB",
-    "&:hover": {
-      color: "#61DAFB",
-      background: "black",
-    },
-  }}
-  onClick={resetGame}
->
-  Reset Game
-</Button>
+        variant="contained"
+        sx={{
+          marginTop: "20px",
+          color: "black",
+          background: "#61DAFB",
+          "&:hover": {
+            color: "#61DAFB",
+            background: "black",
+          },
+        }}
+        onClick={resetGame}
+      >
+        Reset Game
+      </Button>
 
     </>
   );

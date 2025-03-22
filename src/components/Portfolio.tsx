@@ -2,58 +2,39 @@ import React from "react";
 import { FaGithub, FaLinkedin, FaTwitter, FaInstagram, FaStackOverflow } from "react-icons/fa";
 import TicTacToe from "./TicTacToe";
 import Header from "./Header";
+import TypingEffect from "react-typing-effect";
+import { motion } from "framer-motion";
+import { Grid } from "@mui/material";
+
+const slidingVariants = {
+  hidden: { x: "-100vw" },
+  visible: { x: 0, transition: { duration: 1 } }
+};
 
 const Portfolio = () => {
   return (
-    <section id="home" style={{ height: "150vh",minHeight: "100vh",  width: "100%", marginTop: "1rem"}}>
-      <div className="text-center mt-20">
-        <p className="text-green-400 text-lg">Hi, my name is</p>
-        <h1 className="text-6xl font-bold text-gray-200">Priyanka</h1>
-        <h2 className="text-4xl font-semibold text-gray-400 mt-2">Building the web, better.</h2>
-        <p className="mt-4 text-lg max-w-xl mx-auto">
-          Innovating the web with purpose and precision. As a full-stack engineer,
-          I create accessible, user-friendly digital experiences that leave a lasting impact.
-        </p>
-        <button className="mt-6 px-6 py-2 border border-green-400 text-green-400 hover:bg-green-400 hover:text-black transition-all rounded-lg">
-          Get In Touch
-        </button>
-    </div>
-    <div className="text-center mt-20">
-        <p className="text-green-400 text-lg">Hi, my name is</p>
-        <h1 className="text-6xl font-bold text-gray-200">Priyanka</h1>
-        <h2 className="text-4xl font-semibold text-gray-400 mt-2">Building the web, better.</h2>
-        <p className="mt-4 text-lg max-w-xl mx-auto">
-          Innovating the web with purpose and precision. As a full-stack engineer,
-          I create accessible, user-friendly digital experiences that leave a lasting impact.
-        </p>
-        <button className="mt-6 px-6 py-2 border border-green-400 text-green-400 hover:bg-green-400 hover:text-black transition-all rounded-lg">
-          Get In Touch
-        </button>
-    </div>
-    <div className="text-center mt-20">
-        <p className="text-green-400 text-lg">Hi, my name is</p>
-        <h1 className="text-6xl font-bold text-gray-200">Priyanka</h1>
-        <h2 className="text-4xl font-semibold text-gray-400 mt-2">Building the web, better.</h2>
-        <p className="mt-4 text-lg max-w-xl mx-auto">
-          Innovating the web with purpose and precision. As a full-stack engineer,
-          I create accessible, user-friendly digital experiences that leave a lasting impact.
-        </p>
-        <button className="mt-6 px-6 py-2 border border-green-400 text-green-400 hover:bg-green-400 hover:text-black transition-all rounded-lg">
-          Get In Touch
-        </button>
-    </div>
-    <div className="text-center mt-20">
-        <p className="text-green-400 text-lg">Hi, my name is</p>
-        <h1 className="text-6xl font-bold text-gray-200">Priyanka</h1>
-        <h2 className="text-4xl font-semibold text-gray-400 mt-2">Building the web, better.</h2>
-        <p className="mt-4 text-lg max-w-xl mx-auto">
-          Innovating the web with purpose and precision. As a full-stack engineer,
-          I create accessible, user-friendly digital experiences that leave a lasting impact.
-        </p>
-        <button className="mt-6 px-6 py-2 border border-green-400 text-green-400 hover:bg-green-400 hover:text-black transition-all rounded-lg">
-          Get In Touch
-        </button>
-    </div>
+    <section id="home" style={{ height: "150vh", minHeight: "100vh", width: "100%", marginTop: "1rem" }}>
+      <motion.div variants={slidingVariants}
+        initial="hidden"
+        animate="visible"
+        style={{ fontSize: "24px", fontWeight: "bold", textAlign: "center" }}>  <Grid xs={12} container sx={{ fontSize: "24px", fontWeight: "bold", textAlign: "center", justifyContent: "center" }}>
+          <Grid item xs={12} sx={{
+            fontSize: "1rem", color: "#90909b !important", "&:hover": {
+              color: "#61DAFB !important",
+            },
+          }}>Hi, I'm</Grid>
+          <Grid item xs={12} sx={{
+            fontSize: "5rem", "&:hover": {
+              color: "#61DAFB",
+            },
+          }}>Priyanka S</Grid>
+          <Grid item xs={6} sx={{
+            color: "#90909b !important", marginTop: "1rem", "&:hover": {
+              color: "#61DAFB !important",
+            },
+          }}>Explore my journey, skills, and projects as I build seamless digital experiences.</Grid>
+        </Grid>
+      </motion.div>
     </section>
   );
 };
