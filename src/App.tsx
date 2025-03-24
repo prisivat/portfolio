@@ -6,6 +6,7 @@ import ContactInfo from "./components/ContactInfo.tsx";
 import Skills from "./components/Skills.tsx";
 import { Box } from "@mui/material";
 import Sidebar from "./components/SideBar.tsx";
+import ToolsExperience from "./components/Experience.tsx";
 
 const App: React.FC = () => {
   return (
@@ -39,7 +40,11 @@ const App: React.FC = () => {
           <Skills />
         </section>
 
-        <section id="fun" style={{ height: "100vh", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", position: "relative" }}>
+        <section id="experience" style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", position: "relative" }}>
+          <ToolsExperience/>
+        </section>
+
+        <section id="fun" style={{ height: "100vh", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", position: "relative", padding:"0px" }}>
           <TicTacToe />
         </section>
 

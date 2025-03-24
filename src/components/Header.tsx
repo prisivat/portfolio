@@ -56,6 +56,19 @@ const Header: React.FC = () => {
             Skills
           </Link>
         </Grid>
+        {/* experience Link */}
+        <Grid
+          item
+          sx={{
+            marginRight: "20px",
+            "& a": { cursor: "pointer" },
+            "&:hover a": { color: "#61DAFB" },
+          }}
+        >
+          <Link to="experience" smooth={true} duration={500}>
+          Experience
+          </Link>
+        </Grid>
 
         {/* Game Zone Link */}
         <Grid
