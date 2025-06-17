@@ -13,7 +13,7 @@ const slidingVariants = {
 
 const Portfolio = () => {
   return (
-    <section id="home" style={{ height: "150vh", minHeight: "100vh", width: "100%", marginTop: "1rem" }}>
+    <section id="home" style={{ height: "50vh", minHeight: "50vh", width: "100%", marginTop: "1rem" }}>
       <motion.div variants={slidingVariants}
         initial="hidden"
         animate="visible"

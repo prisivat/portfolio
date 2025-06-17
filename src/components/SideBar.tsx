@@ -57,7 +57,7 @@ const Sidebar: React.FC = () => {
 
       {/* Download Resume */}
       <Tooltip title="Download Resume">
-        <a href="/myresume.pdf" download="PriyankaResume.pdf" style={{ paddingTop: "1rem" }}>
+        <a href="/Priyanka Resume25.pdf" download="PriyankaResume.pdf" style={{ paddingTop: "1rem" }}>
           <DownloadIcon sx={{
             cursor: "pointer", fontSize: 32, color: "white", "&:hover": {
               color: "#61DAFB",

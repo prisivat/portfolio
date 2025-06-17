@@ -32,7 +32,7 @@ const App: React.FC = () => {
         <Header />
 
         {/* Sections for React Scroll */}
-        <section id="home" style={{ height: "150vh", minHeight: "100vh", width: "100%", marginTop: "2rem" }}>
+        <section id="home" style={{  width: "100%", marginTop: "2rem" }}>
           <Home />
         </section>
 
